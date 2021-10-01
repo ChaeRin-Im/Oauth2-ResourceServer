@@ -4,9 +4,11 @@ server:
 
 security:
   oauth2:
-    resource:
-      #클라이언트 정보와 token-info-uri 만으로 토큰 체크가 가능
-      token-info-uri: http://localhost:8080/oauth/check_token
-    client:
-      client-id: foo
-      client-secret: bar
+    jwt:
+      signkey: 123@#$
+#    resource:
+#      #클라이언트 정보와 token-info-uri 만으로 토큰 체크가 가능
+#      token-info-uri: http://localhost:8080/oauth/check_token
+#    client:
+#      client-id: foo
+#      client-secret: bar
