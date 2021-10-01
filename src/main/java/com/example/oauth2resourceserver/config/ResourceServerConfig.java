@@ -36,7 +36,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http.headers().frameOptions().disable();
         http.authorizeRequests()
-                .antMatchers("/api/userinfo").access("#oauth2.hasScope('profile')")
+                .antMatchers("/api/userinfo").access("#oauth2.hasScope('email')")
                 .anyRequest().authenticated();
     }
 
